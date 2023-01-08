@@ -21,7 +21,21 @@ export default defineNuxtConfig({
 
     //@ts-ignore
     i18n: {
-
+        strategy: "no_prefix",
+        locales: [
+            {
+                code: 'en',
+                file: 'en.json'
+            },
+            {
+                code: 'ru',
+                file: 'ru.json'
+            }
+        ],
+        lazy: true,
+        langDir: 'locale/',
+        defaultLocale: 'en',
+        parsePages: false,
     }
 
 })
