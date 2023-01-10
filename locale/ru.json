@@ -1,3 +1,27 @@
 {
-
+  "hero_hey": "Hey!",
+  "hero_title_first": "I`am",
+  "hero_title_second": "Kiinse",
+  "hero_spell": "I\"m on the same wavelength with technology.",
+  "hero_follow": "Follow me:",
+  "hero_email": "Email Me",
+  "hero_typer1": "Kotlin developer",
+  "hero_typer2": "Java developer",
+  "hero_typer3": "Backend developer",
+  "hero_typer4": "Software engineer",
+  "content_projects": "Recent Projects",
+  "content_details": "Details",
+  "content_prew": "Preview",
+  "content_more": "View more",
+  "content_whyme": "Why hire me",
+  "content_techs": "Tools & Languages",
+  "whyme_title_1": "Communicative",
+  "whyme_description_1": "I\"m a good listener and always ready to support the conversation.",
+  "whyme_title_2": "Learnability",
+  "whyme_description_2": "I need to see something only once and I will remember it right away.",
+  "whyme_title_3": "Passion",
+  "whyme_description_3": "I\"m happy to learn new technologies, learn something new.",
+  "page_projects": "Projects",
+  "nav_home": "Home",
+  "nav_projects": "Projects"
 }
