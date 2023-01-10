@@ -4,13 +4,16 @@
 // @ts-ignore
 export default defineNuxtConfig({
 
+    ssr: true,
+
     css: [
-        '~/assets/style/scss/main.scss'
+        '~/assets/style/scss/main.scss',
+        '@fortawesome/fontawesome-svg-core/styles.css'
     ],
 
     plugins: [
         {
-            src: '~/plugins/bootstrap.plugin.ts',
+            src: '~/plugins/bootstrap.client.ts',
             mode: "client"
         }
     ],
@@ -21,7 +24,6 @@ export default defineNuxtConfig({
 
     //@ts-ignore
     i18n: {
-        strategy: "no_prefix",
         locales: [
             {
                 code: 'en',
@@ -36,6 +38,7 @@ export default defineNuxtConfig({
         langDir: 'locale/',
         defaultLocale: 'en',
         parsePages: false,
+        strategy: "no_prefix"
     }
 
 })
