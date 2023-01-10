@@ -1,29 +1,44 @@
 <template>
-  <nav id="navbar">
-    <div class="nav__brand">
-      <ul>
-        <li>
-          <NuxtLink to="/">
-            {{$t('hero_title_second')}}
-          </NuxtLink>
-        </li>
-      </ul>
-    </div>
-    <div class="nav__btn justify-content-center align-content-center">
-      <input
-          type="checkbox"
-          class="nav__btn__checkbox align-items-center justify-content-center text-center"
-          id="navi-toggle"
-          @click="stateParam.isActive = !stateParam.isActive"
-      />
-      <div class="nav__btn__button text-center justify-content-center align-content-center" @click="stateParam.isActive = !stateParam.isActive">
-        <div class="btn__svg">
-          <fai icon="fas fa-bars"/>
+  <ClientOnly>
+    <nav id="navbar">
+      <div class="nav__brand">
+        <ul>
+          <li>
+            <NuxtLink to="/">
+              {{$t('hero_title_second')}}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__btn justify-content-center align-content-center">
+        <input
+            type="checkbox"
+            class="nav__btn__checkbox align-items-center justify-content-center text-center"
+            id="navi-toggle"
+            @click="stateParam.isActive = !stateParam.isActive"
+        />
+        <div class="nav__btn__button text-center justify-content-center align-content-center" @click="stateParam.isActive = !stateParam.isActive">
+          <div class="btn__svg">
+            <icons icon="fa-solid fa-bars"/>
+          </div>
+        </div>
+        <div class="nav__btn__nav">
+          <ul class="nav__btn__list">
+            <li class="nav__btn__item" onClick={closeNav} v-for="item in menuItems">
+              <NuxtLink
+                  :to="item.path"
+                  :style="[stateParam.isActive ? 'color: #ff5403' : null]"
+                  class="nav__btn__link"
+              >
+                {{ $t(item.name) }}
+              </NuxtLink>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="nav__btn__nav">
-        <ul class="nav__btn__list">
-          <li class="nav__btn__item" onClick={closeNav} v-for="item in menuItems">
+      <div class="nav__links">
+        <ul>
+          <li v-for="item in menuItems">
             <NuxtLink
                 :to="item.path"
                 :style="[stateParam.isActive ? 'color: #ff5403' : null]"
@@ -32,26 +47,13 @@
               {{ $t(item.name) }}
             </NuxtLink>
           </li>
+          <li @click="changeLocale()">
+            <icons icon="fa-solid fa-globe"/>
+          </li>
         </ul>
       </div>
-    </div>
-    <div class="nav__links">
-      <ul>
-        <li v-for="item in menuItems">
-          <NuxtLink
-              :to="item.path"
-              :style="[stateParam.isActive ? 'color: #ff5403' : null]"
-              class="nav__btn__link"
-          >
-            {{ $t(item.name) }}
-          </NuxtLink>
-        </li>
-        <li @click="changeLocale()">
-          <icons icon="fas fa-globe"/>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </ClientOnly>
 </template>
 
 <script>

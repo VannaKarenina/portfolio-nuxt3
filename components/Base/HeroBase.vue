@@ -27,15 +27,15 @@
                 <h6 class="hero__content__social">
                   {{ $t('hero_follow') }}&nbsp;
                   <span class="hero__content__social-icons">
-                    <a :href="link.url" v-for="link in links" :key="link.icon">
-                        <fai :icon="'fa-brands fa-'+link.icon" class="social-icon github" />
+                    <a :href="link.url" v-for="link in hero_socialLinks" :key="link.icon">
+                        <icons :icon="'fa-brands fa-'+link.icon" class="social-icon github" />
                     </a>
                   </span>
                 </h6>
                 <div class="hero__content__main-btns">
                   <a href="mailto:me@kiinse.me">
                     <b-button variant="primary" size="lg">
-                      <fai icon="fas fa-envelope" class="main-btn" />
+                      <icons icon="fas fa-envelope" class="main-btn" />
                       {{ $t('hero_email') }}
                     </b-button>
                   </a>
@@ -51,7 +51,7 @@
             <b-col sm class="hero__image">
               <img
                   id="hero-avatar"
-                  :src="hero_avatar"
+                  :src="this.hero_avatar"
                   alt="kiinse"
                   loading="eager"
               />
@@ -65,11 +65,17 @@
 
 <script>
 import TyperUtil from "~/components/Utils/TyperUtil.vue";
-
+import initialConfig from "~/config/initial.config";
 export default {
   name: "HeroBase",
   components: {
     TyperUtil
+  },
+  data: function () {
+    return {
+      hero_avatar: initialConfig.hero.avatar_url,
+      hero_socialLinks: initialConfig.socialLinks
+    }
   }
 }
 </script>
