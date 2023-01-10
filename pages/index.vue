@@ -1,13 +1,18 @@
 <template>
-  
+  <div>
+    <HeroBase/>
+  </div>
 </template>
 
 <script>
+import HeroBase from "~/components/Base/HeroBase.vue";
+
 export default {
-  name: "index"
+  name: "index",
+  components: {HeroBase}
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
