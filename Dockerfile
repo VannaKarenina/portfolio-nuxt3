@@ -18,9 +18,9 @@ FROM node:16.15.0-slim as production
 COPY --from=prod-base /nuxt/.output /nuxt/.output
 
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=8888
+ENV NUXT_PORT=3000
 
-EXPOSE 8888
+EXPOSE 3000
 
 ENV NODE_ENV=production
 
