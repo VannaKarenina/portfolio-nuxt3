@@ -1,0 +1,6 @@
+services:
+  front:
+    build: .
+    container_name: portfolio
+    ports:
+      - "3000:8888"
