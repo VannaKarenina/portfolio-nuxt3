@@ -11,30 +11,7 @@
         </ul>
       </div>
       <div class="nav__btn justify-content-center align-content-center">
-        <input
-            type="checkbox"
-            class="nav__btn__checkbox align-items-center justify-content-center text-center"
-            id="navi-toggle"
-            @click="stateParam.isActive = !stateParam.isActive"
-        />
-        <div class="nav__btn__button text-center justify-content-center align-content-center" @click="stateParam.isActive = !stateParam.isActive">
-          <div class="btn__svg">
-            <icons icon="fa-solid fa-bars"/>
-          </div>
-        </div>
-        <div class="nav__btn__nav">
-          <ul class="nav__btn__list">
-            <li class="nav__btn__item" onClick={closeNav} v-for="item in menuItems">
-              <NuxtLink
-                  :to="item.path"
-                  :style="[stateParam.isActive ? 'color: #ff5403' : null]"
-                  class="nav__btn__link"
-              >
-                {{ $t(item.name) }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+
       </div>
       <div class="nav__links">
         <ul>
@@ -52,6 +29,15 @@
           </li>
         </ul>
       </div>
+      <b-container fluid class="nav_mobile_setting align-content-center justify-content-center text-center">
+        <NuxtLink v-for="item in menuItems"
+                  :to="item.path"
+                  :style="[stateParam.isActive ? 'color: #ff5403' : null]"
+                  class="nav__btn__link__mobile m-2"
+        >
+          {{ $t(item.name) }}
+        </NuxtLink>
+      </b-container>
     </nav>
   </ClientOnly>
 </template>
@@ -87,6 +73,15 @@ export default {
 
 <style scoped lang="scss">
 @import "assets/style/scss/variables";
+.nav__btn__link__mobile {
+  font-size: 3vh;
+}
+.nav__btn__link__mobile:hover {
+  color: #007bff;
+}
+.nav_mobile_setting {
+  display: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -135,6 +130,12 @@ a {
 }
 @media screen and (max-width: $screen-sm) {
   .nav__btn {
+    display: block;
+  }
+  .nav__brand {
+    display: none;
+  }
+  .nav_mobile_setting {
     display: block;
   }
 }
