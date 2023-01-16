@@ -20,6 +20,14 @@ export default defineNuxtConfig({
         }
     ],
 
+    vite: {
+        server: {
+            hmr: {
+                clientPort: 8001,
+            }
+        }
+    },
+
     modules: [
         '@nuxtjs/i18n',
         '@nuxt/image-edge',
