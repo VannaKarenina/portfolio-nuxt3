@@ -6,6 +6,8 @@ export default defineNuxtConfig({
 
     ssr: true,
 
+    builder: "vite",
+
     css: [
         '~/assets/style/scss/main.scss',
         '@fortawesome/fontawesome-svg-core/styles.css'
@@ -19,7 +21,9 @@ export default defineNuxtConfig({
     ],
 
     modules: [
-        '@nuxtjs/i18n'
+        '@nuxtjs/i18n',
+        '@nuxt/image-edge',
+        '@nuxt/content'
     ],
 
     //@ts-ignore
