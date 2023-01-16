@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     getImageUrl(path) {
-      return new URL(`../../assets/images/`+path, import.meta.url).href
+      return new URL(`../../images/`+path, import.meta.url).href
     },
     showModal() {
       this.isActive = !this.isActive
