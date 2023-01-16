@@ -4,8 +4,16 @@ export default {
     },
     socialLinks: [
         {
-            icon: 'github',
-            url: 'https://github.com'
+            icon: 'linkedin',
+            url: 'https://www.linkedin.com/in/kiinse'
+        },
+        {
+            icon: 'twitter',
+            url: 'https://www.twitter.com/kiinse_me'
+        },
+        {
+            icon: 'instagram',
+            url: 'https://www.instagram.com/kiinse.me'
         }
     ]
 }

@@ -1,7 +1,7 @@
 export const projectsListConfig = [
     {
         title: 'ThirstForWater',
-        imageLink: 'thirstforwater.png',
+        imageLink: 'thirstforwater.webp',
         tech: [
             {
                 tooltip: 'Github',
@@ -9,11 +9,11 @@ export const projectsListConfig = [
             }
         ],
         readmePath: '/projects/thirstforwater',
-        liveLink: 'https://github.com/NubilumDev/ThirstForWater'
+        liveLink: 'https://www.spigotmc.org/resources/thirstforwater.105680/'
     },
     {
         title: 'TelegramPKGH',
-        imageLink: 'pkghlogo.jpg',
+        imageLink: 'pkghlogo.webp',
         tech: [
             {
                 tooltip: 'Github',
@@ -23,4 +23,40 @@ export const projectsListConfig = [
         readmePath: '/projects/telegrampkgh',
         liveLink: 'https://t.me/pkghschedulebot'
     },
+    {
+        title: 'AstraFuel',
+        imageLink: 'astrafuel.webp',
+        tech: [
+            {
+                tooltip: 'Github',
+                icon: 'github'
+            }
+        ],
+        readmePath: '/projects/astrafuel',
+        liveLink: 'https://github.com/kiinse/AstraFuel'
+    },
+    {
+        title: 'DarkWaterAPI',
+        imageLink: 'darkwaterapi.webp',
+        tech: [
+            {
+                tooltip: 'Github',
+                icon: 'github'
+            }
+        ],
+        readmePath: '/projects/darkwaterapi',
+        liveLink: 'https://www.spigotmc.org/resources/darkwaterapi.104040/'
+    },
+    {
+        title: 'ColdySteps',
+        imageLink: 'coldysteps.webp',
+        tech: [
+            {
+                tooltip: 'Github',
+                icon: 'github'
+            }
+        ],
+        readmePath: '/projects/coldysteps',
+        liveLink: 'https://www.spigotmc.org/resources/coldysteps.105678/'
+    }
 ]
