@@ -5,7 +5,7 @@
         <div class="content__recent-projects__header">
           <h2>{{$t('content_projects')}}</h2>
           <NuxtLink to="/projects">
-            <b-button variant="primary" size="lg">
+            <b-button variant="warning" size="lg">
               {{$t('content_more')}}
             </b-button>
           </NuxtLink>

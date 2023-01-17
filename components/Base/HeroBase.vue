@@ -34,15 +34,15 @@
                 </h6>
                 <div class="hero__content__main-btns">
                   <a href="mailto:me@kiinse.me">
-                    <b-button variant="primary" size="lg">
+                    <b-button variant="warning" size="lg">
                       <icons icon="fas fa-envelope" class="main-btn" />
                       {{ $t('hero_email') }}
                     </b-button>
                   </a>
                   &nbsp;
-                  <a href='https://github.com/kiinse' target="_blank" rel="noopener noreferrer">
-                    <b-button variant="outline-primary" size="lg">
-                      <icons icon="fa-brands fa-github" class="main-btn" />
+                  <a href='https://github.com/kiinse' target="_blank" rel="noopener noreferrer" class="hero__content__main-btns-outline">
+                    <b-button variant="outline-warning" size="lg">
+                      <icons icon="fa-brands fa-github" class="main-btn"/>
                     </b-button>
                   </a>
                 </div>
@@ -111,7 +111,13 @@ export default {
     }
     &__main-btns {
       button {
-        color: $text-color-light !important;
+        color: mixins.$text-color-dark !important;
+        margin-top: 5%;
+      }
+    }
+    &__main-btns-outline {
+      button {
+        color: mixins.$text-color-light !important;
         margin-top: 5%;
       }
     }
@@ -127,12 +133,10 @@ export default {
     }
   }
   &__image {
-    transform: rotateY(180deg);
     img {
       margin-top: -20%;
       width: 85%;
       height: auto;
-      transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
   }
   @media screen and (max-width: $screen-sm) {
