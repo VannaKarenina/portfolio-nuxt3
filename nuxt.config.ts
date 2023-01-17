@@ -8,6 +8,22 @@ export default defineNuxtConfig({
 
     builder: "vite",
 
+    app: {
+        head: {
+            title: '👑Kiinse',
+            htmlAttrs: {
+                lang: 'en',
+            },
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { hid: 'description', name: 'description', content: '' },
+                { name: 'format-detection', content: 'telephone=no' },
+            ],
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        },
+    },
+
     css: [
         '~/assets/style/scss/main.scss',
         '@fortawesome/fontawesome-svg-core/styles.css'
@@ -19,14 +35,6 @@ export default defineNuxtConfig({
             mode: "client"
         }
     ],
-
-    vite: {
-        server: {
-            hmr: {
-                clientPort: 8001,
-            }
-        }
-    },
 
     modules: [
         '@nuxtjs/i18n',
