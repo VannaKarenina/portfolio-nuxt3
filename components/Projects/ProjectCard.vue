@@ -10,8 +10,7 @@
               </b-col>
               <b-col>
                 <div class="project-card__details__tech-stack">
-                  <icons v-for="item in tech" :key="item.title" :id="item.icon" :title="item.tooltip" :icon="'fa-brands fa-'+item.icon">
-                  </icons>
+                  <icons v-for="item in tech" :key="item.title" :id="item.icon" :title="item.tooltip" :icon="'fa-brands fa-'+item.icon"></icons>
                 </div>
               </b-col>
             </b-row>
@@ -126,12 +125,13 @@ export default {
       justify-content: space-evenly;
       padding: 0.5rem 0.2rem;
       border-radius: $border-radius-2;
-      background: $color-primary-4;
+      background: $color-primary-8;
       svg {
         width: 10%;
         height: auto;
+        color: $text-color-dark !important;
         &:hover {
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
         }
         @media screen and (max-width: $screen-sm) {
           width: 20%;
