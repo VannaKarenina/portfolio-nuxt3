@@ -8,6 +8,10 @@ export default defineNuxtConfig({
 
     builder: "vite",
 
+    nitro: {
+      compressPublicAssets: true
+    },
+
     app: {
         head: {
             title: '👑Kiinse',
