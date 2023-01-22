@@ -2,6 +2,7 @@
   <div>
     <NavigationBase/>
     <slot/>
+    <BaseBottomBase/>
   </div>
 </template>
 

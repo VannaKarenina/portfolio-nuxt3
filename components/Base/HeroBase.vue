@@ -5,6 +5,14 @@
         <div class="hero">
           <b-row>
             <b-col sm class="hero__content">
+              <div class="hero__mobile__image">
+                <img
+                    id="hero-avatar"
+                    :src="this.hero_avatar"
+                    alt="kiinse"
+                    loading="eager"
+                />
+              </div>
               <div>
                 <h6>{{$t('hero_hey')}}</h6>
                 <h1>
@@ -34,6 +42,7 @@
                 </h6>
                 <div class="hero__content__main-btns">
                   <a href="mailto:me@kiinse.me">
+                    <!--        TODO: Вынести variant отсюда       -->
                     <b-button variant="warning" size="lg">
                       <icons icon="fas fa-envelope" class="main-btn" />
                       {{ $t('hero_email') }}
@@ -41,6 +50,7 @@
                   </a>
                   &nbsp;
                   <a href='https://github.com/kiinse' target="_blank" rel="noopener noreferrer" class="hero__content__main-btns-outline">
+                    <!--        TODO: Вынести variant отсюда       -->
                     <b-button variant="outline-warning" size="lg">
                       <icons icon="fa-brands fa-github" class="main-btn"/>
                     </b-button>
@@ -134,14 +144,28 @@ export default {
   }
   &__image {
     img {
+      border-radius: 25%;
       margin-top: -20%;
       width: 85%;
+      height: auto;
+    }
+  }
+  &__mobile__image {
+    display: none;
+    img {
+      border-radius: 25%;
+      margin-top: -15%;
+      margin-bottom: 5%;
+      width: 45%;
       height: auto;
     }
   }
   @media screen and (max-width: $screen-sm) {
     .hero__image {
       display: none;
+    }
+    .hero__mobile__image {
+      display: block;
     }
   }
 }
