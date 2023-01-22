@@ -32,7 +32,6 @@
       <b-container fluid class="nav_mobile_setting align-content-center justify-content-center text-center">
         <NuxtLink v-for="item in menuItems"
                   :to="item.path"
-                  :style="[stateParam.isActive ? 'color: #ff5403' : null]"
                   class="nav__btn__link__mobile m-2"
         >
           {{ $t(item.name) }}
