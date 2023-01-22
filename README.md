@@ -1,42 +1,78 @@
-# Nuxt 3 Minimal Starter
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/VannaKarenina/portfolio-nuxt3/master/.github/images/site_screenshot.png"  alt=""/>
+  <br>Portfolio<br>
+</h1>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center">
+  <b>A portfolio made by <code>nuxt 3</code> for kiinse</b><br><br>
 
-## Setup
+  <a href="https://github.com/VannaKarenina/portfolio-nuxt3/releases">
+    <img src="https://img.shields.io/github/v/release/VannaKarenina/portfolio-nuxt3?include_prereleases&style=flat-square" alt="release">
+  </a>
+  <a href="https://github.com/VannaKarenina/portfolio-nuxt3">
+    <img src="https://img.shields.io/github/repo-size/VannaKarenina/portfolio-nuxt3?style=flat-square" alt="size"> 
+  </a>
+  <a href="https://github.com/VannaKarenina/portfolio-nuxt3/releases">
+    <img src="https://img.shields.io/github/downloads/VannaKarenina/portfolio-nuxt3/total?style=flat-square" alt="downloads"> 
+  </a>
+  <a href="https://github.com/VannaKarenina/portfolio-nuxt3/issues">
+    <img src="https://img.shields.io/github/issues/VannaKarenina/portfolio-nuxt3?style=flat-square" alt="issues"> 
+  </a>
+  <a href="https://github.com/VannaKarenina/portfolio-nuxt3/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/VannaKarenina/portfolio-nuxt3?style=flat-square" alt="licence"> 
+  </a><br>
+</p>
 
-Make sure to install the dependencies:
+<h3 align="center">
+  Created with
+</h3>
 
-```bash
-# yarn
-yarn install
+<center>
 
-# npm
-npm install
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Nuxtjs](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![WebStorm](https://img.shields.io/badge/webstorm-143?style=for-the-badge&logo=webstorm&logoColor=white&color=black)
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+</center>
 
-## Development Server
+<p align="center">
+<a href="#support">Support</a> •
+<a href="#features">Features</a> •
+<a href="#download">Installation</a> •
+<a href="#usage">Configuration</a>
+</p>
 
-Start the development server on http://localhost:3000
+## Donations
 
-```bash
-npm run dev
-```
+If you want to support the project, then
+star this repository ♥
 
-## Production
+## Support
 
-Build the application for production:
+Join the [Discord](https://discord.gg/ec7y5NY82b) if you have any questions.
+Please **don't** open an issue just for the sake of questions.
 
-```bash
-npm run build
-```
+## Features
 
-Locally preview production build:
+- Easy setup
+- Ready docker files to run
+- Optimized code
+- Full configuration
 
-```bash
-npm run preview
-```
+## Installation
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Installation happens through **docker compose**. 
+
+## Configuration
+
+| File                             | Description |
+|----------------------------------|-------------|
+| config/initial.config.ts         |             |
+| config/projectsList.config.ts    |             |
+| config/tools.config.ts           |             |
+| locale/en.json                   |             |
+| locale/ru.json                   |             |
+| assets/style/scss/main.scss      |             |
+| assets/style/scss/mixins.scss    |             |
+| assets/style/scss/variables.scss |             |
