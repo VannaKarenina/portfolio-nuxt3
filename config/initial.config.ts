@@ -15,5 +15,9 @@ export default {
             icon: 'instagram',
             url: 'https://www.instagram.com/kiinse.me'
         }
-    ]
+    ],
+    hero_buttons: {
+        email_button: 'warning',
+        github_button: 'outline-warning'
+    }
 }

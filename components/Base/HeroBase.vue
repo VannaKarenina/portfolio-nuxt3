@@ -5,6 +5,14 @@
         <div class="hero">
           <b-row>
             <b-col sm class="hero__content">
+              <div class="hero__mobile__image">
+                <img
+                    id="hero-avatar"
+                    :src="this.hero_avatar"
+                    alt="kiinse"
+                    loading="eager"
+                />
+              </div>
               <div>
                 <h6>{{$t('hero_hey')}}</h6>
                 <h1>
@@ -34,14 +42,14 @@
                 </h6>
                 <div class="hero__content__main-btns">
                   <a href="mailto:me@kiinse.me">
-                    <b-button variant="warning" size="lg">
+                    <b-button :variant="hero_buttons_conf.email_button" size="lg">
                       <icons icon="fas fa-envelope" class="main-btn" />
                       {{ $t('hero_email') }}
                     </b-button>
                   </a>
                   &nbsp;
                   <a href='https://github.com/kiinse' target="_blank" rel="noopener noreferrer" class="hero__content__main-btns-outline">
-                    <b-button variant="outline-warning" size="lg">
+                    <b-button :variant="hero_buttons_conf.github_button" size="lg">
                       <icons icon="fa-brands fa-github" class="main-btn"/>
                     </b-button>
                   </a>
@@ -74,7 +82,8 @@ export default {
   data: function () {
     return {
       hero_avatar: initialConfig.hero.avatar_url,
-      hero_socialLinks: initialConfig.socialLinks
+      hero_socialLinks: initialConfig.socialLinks,
+      hero_buttons_conf: initialConfig.hero_buttons
     }
   }
 }
@@ -134,14 +143,28 @@ export default {
   }
   &__image {
     img {
+      border-radius: 25%;
       margin-top: -20%;
       width: 85%;
+      height: auto;
+    }
+  }
+  &__mobile__image {
+    display: none;
+    img {
+      border-radius: 25%;
+      margin-top: -15%;
+      margin-bottom: 5%;
+      width: 45%;
       height: auto;
     }
   }
   @media screen and (max-width: $screen-sm) {
     .hero__image {
       display: none;
+    }
+    .hero__mobile__image {
+      display: block;
     }
   }
 }
